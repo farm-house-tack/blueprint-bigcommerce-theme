@@ -1,0 +1,167 @@
+%%GLOBAL_AddToCartButtonControlScript%%
+<form method="post" action="%%GLOBAL_CartLink%%" onsubmit="return check_add_to_cart(this, %%GLOBAL_ProductOptionRequired%%) %%GLOBAL_FastCartButtonJs%%"  enctype="multipart/form-data" id="productDetailsAddToCartForm">
+    <input type="hidden" name="action" value="add" />
+    <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+    <input type="hidden" name="variation_id" class="CartVariationId" value="" />
+    <input type="hidden" name="currency_id" value="" />
+    <div class="ProductDetailsGrid ProductAddToCart">
+        
+        <!-- details grid -->
+        
+        <div class="DetailRow ProductSKU" style="display: %%GLOBAL_HideSKU%%">
+                    <div class="Label">%%LNG_SKU%%:</div>
+                    <div class="Value">
+                        <span class="VariationProductSKU">
+                            %%GLOBAL_SKU%%
+                        </span>
+                    </div>
+                </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideVendorDetails%%">
+            <div class="Label">%%LNG_Vendor%%:</div>
+            <div class="Value">
+                %%GLOBAL_VendorName%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideCondition%%">
+            <div class="Label">%%LNG_Condition%%:</div>
+            <div class="Value">
+                %%GLOBAL_ProductCondition%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideWeight%%">
+            <div class="Label">%%LNG_Weight%%:</div>
+            <div class="Value">
+                <span class="VariationProductWeight">
+                    %%GLOBAL_ProductWeight%%
+                </span>
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideAvailability%%">
+            <div class="Label">%%LNG_Availability%%:</div>
+            <div class="Value">
+                %%GLOBAL_Availability%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="display: %%GLOBAL_HideShipping%%">
+            <div class="Label">%%LNG_Shipping%%:</div>
+            <div class="Value">
+                %%GLOBAL_ShippingPrice%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMinQty%%">
+            <div class="Label">%%LNG_ProductMinQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MinQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideMaxQty%%">
+            <div class="Label">%%LNG_ProductMaxQty%%:</div>
+            <div class="Value">
+                %%GLOBAL_MaxQty%% %%LNG_units%%
+            </div>
+        </div>
+
+        <div class="DetailRow InventoryLevel" style="%%GLOBAL_HideCurrentStock%%">
+            <div class="Label">%%GLOBAL_CurrentStockLabel%%:</div>
+            <div class="Value">
+                <span class="VariationProductInventory">
+                    %%GLOBAL_InventoryList%%
+                </span>
+            </div>
+        </div>
+
+        <div class="DetailRow" style="%%GLOBAL_HideGiftWrapMessage%%">
+            <div class="Label">%%LNG_GiftWrapping%%:</div>
+            <div class="Value">
+                %%GLOBAL_GiftWrappingAvailable%%
+            </div>
+        </div>
+        
+        
+        <!-- details grid -->
+        
+        %%SNIPPET_ProductFieldsList%%
+        
+        <div class="ProductOptionList">
+            %%SNIPPET_VariationList%%
+        </div>
+
+        <div class="productAttributeList" style="%%GLOBAL_HideProductAttributeList%%">
+            %%GLOBAL_ProductAttributeList%%
+        </div>
+
+        %%SNIPPET_EventDate%%
+
+        <div class="DetailRow qty" style="display: ">
+            <div class="Label QuantityInput">Quantity:</div>
+            <div class="Value AddCartButton">
+                <span style="display: %%GLOBAL_DisplayAddQty%%;">
+                    %%GLOBAL_AddToCartQty%%
+                </span>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="OutOfStockMessage InfoMessage ErrorMessage">
+            %%SNIPPET_SideAddItemSoldOut%%
+        </div>
+        
+        <div class="addto">
+            <div class="InfoMessage" style="display: %%GLOBAL_HideBulkDiscountLink%%;">
+                <a href="#" onclick="$.iModal({data: $('#ProductDetailsBulkDiscountThickBox').html(), width: 600}); return false;">
+                    %%LNG_BulkDiscountLink%%
+                </a>
+            </div>
+            <div class="BulkDiscount" style="display: %%GLOBAL_DisplayAdd%%">
+                %%GLOBAL_AddToCartButtonOptimizerScriptTag%%
+                    <input type="submit" class="btn add-to-cart" value="Add To Cart" />
+                %%GLOBAL_AddToCartButtonOptimizerNoScriptTag%%
+            </div>
+            <!-- Add to Wishlist -->
+            <div style="display:" id="SideProductAddToWishList" class="Block Moveable Panel AddToWishlistLink">
+                <span></span><input value="Add to Wishlist" type="button" class="alt wishTrigger" title="Add to Wishlist" />
+            </div>
+          
+            <!-- //Custom Add to Wishlist -->
+        </div><!-- addto -->
+       
+        
+        
+        
+    </div>
+</form>
+
+<!-- Add to Wishlist -->
+
+<div class="Block Moveable Panel AddToWishlistLink" id="SideProductAddToWishList" style="display: none">
+    <div class="BlockContent">
+        <form name="frmWishList" id="frmWishList" action="%%GLOBAL_ShopPath%%/wishlist.php" method="get">
+            <input type="hidden" name="action" value="add" />
+            <input type="hidden" name="product_id" value="%%GLOBAL_ProductId%%" />
+            <input type="hidden" name="variation_id" value="" class="WishListVariationId"/>
+            <input type="submit" class="wishlist-button" value="Add to wishlist" alt="%%LNG_AddToWishList%%" />
+        </form>
+    </div>
+</div>
+
+<!-- //Custom Add to Wishlist -->
+
+%%GLOBAL_ProductBulkDiscountThickBox%%
+
+<script language="javascript" type="text/javascript">//<![CDATA[
+lang.OptionMessage = "%%GLOBAL_OptionMessage%%";
+lang.VariationSoldOutMessage = "%%LNG_VariationSoldOutMessage%%";
+lang.InvalidQuantity = "%%LNG_InvalidQuantity%%";
+lang.EnterRequiredField = "%%LNG_EnterRequiredField%%";
+lang.InvalidFileTypeJS = "%%LNG_InvalidFileTypeJS%%";
+var ShowAddToCartQtyBox = "%%GLOBAL_ShowAddToCartQtyBox%%";
+%%GLOBAL_ProductMinMaxQtyJavascript%%
+//]]></script>
+%%GLOBAL_EventDateJavascript%%

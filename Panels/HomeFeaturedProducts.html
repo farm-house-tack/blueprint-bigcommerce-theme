@@ -1,0 +1,27 @@
+<div class="Block FeaturedProducts Moveable Panel"  id="HomeFeaturedProducts" style="display:%%GLOBAL_HideHomeFeaturedProductsPanel%%">
+    <h3>%%LNG_FeaturedProducts%%</h3>
+    <div class="clearfix"></div>
+    <div class="BlockContent">
+        <div class="feature-product-owl ProductList">
+            %%SNIPPET_HomeFeaturedProducts%%
+        </div>
+        <script type="text/javascript">
+        $(document).ready(function() {
+             $(".feature-product-owl").owlCarousel({ 
+                navigation: true,
+                navigationText: false,
+                pagination: false,
+                nav: true,
+                items: 4,
+                itemsDesktop : [1199,4],
+                itemsDesktopSmall : [979,3],
+                itemsTablet: [768,2],
+                itemsTabletSmall: [540,1],
+                itemsMobile : [360,1]
+             });
+        });
+    </script>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>

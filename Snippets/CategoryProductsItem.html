@@ -1,0 +1,31 @@
+<li class="%%GLOBAL_AlternateClass%%">
+    <div class="ProductImage QuickView" data-product="%%GLOBAL_ProductId%%">
+        %%GLOBAL_ProductThumb%%
+        <div class="action">
+            <div class="ProductActionAdd" style="display:%%GLOBAL_HideActionAdd%%;">
+                <a href="%%GLOBAL_ProductURL%%" class="btn icon-%%GLOBAL_ProductAddText%%" title="%%GLOBAL_ProductAddText%%"><span>%%GLOBAL_ProductAddText%%<span></a>
+            </div>
+            <div class="ProductCompareButton" style="display:%%GLOBAL_HideCompareItems%%">
+            <input type="checkbox" class="CheckBox" name="compare_product_ids" id="compare_%%GLOBAL_ProductId%%" value="%%GLOBAL_ProductId%%" onclick="product_comparison_box_changed(this.checked)" /> 
+            <label for="compare_%%GLOBAL_ProductId%%">%%LNG_Compare%%</label>
+        </div>
+          
+        </div>
+        <div class="productWishlist" style="display:%%GLOBAL_HideWishlist%%"><a href="/wishlist.php?action=add&product_id=%%GLOBAL_ProductId%%&variation_id=">%%LNG_YourWishList%%</a></div>
+        
+    </div>
+    <div class="ProductDetails">
+        <a href="%%GLOBAL_ProductLink%%" class="%%GLOBAL_SearchTrackClass%% pname">%%GLOBAL_ProductName%%</a>
+    </div>
+    <div class="ProductPriceRating">
+        <span class="Rating Rating%%GLOBAL_ProductRating%%">
+            <img src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_ProductRating%%.png" alt="" style="%%GLOBAL_HideProductRating%%" />
+        </span>
+    </div>
+    <em class="p-price">%%GLOBAL_ProductPrice%%</em>
+   
+   
+    
+
+    <!--<span class="saleItem"><strong>Sale</strong></span>-->
+</li>

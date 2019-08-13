@@ -1,0 +1,129 @@
+<link rel="stylesheet" type="text/css" href="%%GLOBAL_CdnAppPath%%/javascript/jquery/themes/cupertino/ui.all.css?%%GLOBAL_JSCacheToken%%" />
+<link rel="stylesheet" type="text/css" media="screen" href="%%GLOBAL_productAttributesCssPath%%?%%GLOBAL_JSCacheToken%%" />
+<script type="text/javascript" src="%%GLOBAL_jQueryUIPath%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jquery.form.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.attributes.js?%%GLOBAL_JSCacheToken%%"></script>
+<script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jCarousel/jCarousel.js?%%GLOBAL_JSCacheToken%%"></script>
+%%SNIPPET_ProductImageZoomer%%
+
+<script type="text/javascript">//<![CDATA[
+var ThumbURLs = new Array();
+var ProductImageDescriptions = new Array();
+var CurrentProdThumbImage = %%GLOBAL_CurrentProdThumbImage%%;
+var ShowVariationThumb =false;
+var ProductThumbWidth = %%GLOBAL_ProductThumbWidth%%;
+var ProductThumbHeight =  %%GLOBAL_ProductThumbHeight%%;
+var ProductMaxZoomWidth = %%GLOBAL_ProductMaxZoomWidth%%;
+var ProductMaxZoomHeight =  %%GLOBAL_ProductMaxZoomHeight%%;
+var ProductTinyWidth = %%GLOBAL_ProductMaxTinyWidth%%;
+var ProductTinyHeight =  %%GLOBAL_ProductMaxTinyHeight%%;
+
+%%GLOBAL_ProdImageJavascript%%
+
+//Don't enable Cloud Zoom (product image zoom) on touch device
+//Mouseenter/Mouseover events are not ideal for touch devices
+//for more info search for this code in /script/main.js
+if (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0)){   
+    var ShowImageZoomer = false;
+} else {
+    var ShowImageZoomer = %%GLOBAL_ShowImageZoomer%%;
+}
+
+var productId = %%GLOBAL_ProductId%%;
+//]]></script>
+%%Discount.FreeShippingEligibility%%
+<div class="Block Moveable Panel PrimaryProductDetails no-ptop" id="ProductDetails">
+    <div class="BlockContent ">
+        %%GLOBAL_ProductDetailFlashMessages%%    
+        <!-- left-content -->
+        <div class="left-content">
+                <div class="ProductThumb" style="%%GLOBAL_HideProductThumb%%">
+                    %%GLOBAL_LightBoxImageJavascript%%
+                    %%SNIPPET_ProductThumbImage%%   
+                </div>
+                 <div class="ImageCarouselBox" style="margin:0 auto; %%GLOBAL_HideImageCarousel%%">
+                      <a id="ImageScrollPrev" class="prev disabled" href="#" style="display: inline;"><img src="%%ASSET_images/bkg-icons11_03.png%%" alt=""></a>
+                        <div class="ProductTinyImageList">
+                            <ul>
+                                %%SNIPPET_ProductTinyImages%%
+                            </ul>
+                        </div>
+                     <a id="ImageScrollNext" class="next" href="#" style="display: inline;"><img src="%%ASSET_images/bkg-icons11_07.png%%" alt=""></a>
+                    </div>
+                    <div style="%%GLOBAL_HideMorePicturesLink%%" class="SeeMorePicturesLink">
+                        <a href="#" onclick="%%GLOBAL_TinyImageClickJavascript%% return false;" class="ViewLarger">%%GLOBAL_SeeMorePictures%%</a>
+                    </div>
+                    %%GLOBAL_PinterestButton%%
+        </div>
+       
+        <!-- Product Details Content -->
+        <div class="ProductMain">
+            <div class="ProductDetailsGrid">
+                <div class="DetailRow product-heading">
+                    <div class="Value" style="display: %%GLOBAL_HideBrandLink%%">
+                        <h4 class="BrandName"><a  href="%%GLOBAL_BrandLink%%">%%GLOBAL_BrandName%%</a></h4>
+                    </div>
+                    %%GLOBAL_ProductNameOptimizerScriptTag%%
+                    <h1>%%GLOBAL_ProductName%%</h1>
+                    %%GLOBAL_ProductNameOptimizerNoScriptTag%%
+                </div>
+                <div class="DetailRow product-rating" style="display: %%GLOBAL_HideRating%%">
+                    <div class="Value">
+                        <span>
+                            <img  src="%%GLOBAL_IMG_PATH%%/IcoRating%%GLOBAL_Rating%%.png" alt="" />
+                            <span style="display:%%GLOBAL_HideReviewLink%%">
+                                <a href="#ProductReviews" onclick="%%GLOBAL_ReviewLinkOnClick%%">
+                                    %%GLOBAL_ReviewLinkText%%
+                                </a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="DetailRow shortDesc">%%GLOBAL_ProductSummary%%</div>
+                <div class="DetailRow PriceRow p-price" style="%%GLOBAL_HidePrice%%">
+                    <div class="Value">
+                        <span class="ProductPrice VariationProductPrice">%%GLOBAL_RetailPrice%% %%GLOBAL_ProductPrice%% </span>                                         
+                    </div>
+                </div>
+                <div class="s-price">
+                    %%GLOBAL_IncludingExcludingTax%% %%GLOBAL_YouSave%%
+                </div> 
+                <script type="text/javascript">
+                    jQuery(document).ready(function() {
+                        jQuery('.ProductDetailsGrid div.PriceRow').has('strike').addClass('SalePrice');
+                    });
+
+                </script> 
+               
+            </div>
+            
+            %%Panel.ProductTabs%%
+            %%SNIPPET_ProductAddToCartRight%%
+            %%SNIPPET_ProductExpectedReleaseDate%%
+            %%GLOBAL_AddThisLink%%
+            %%GLOBAL_FacebookLikeButtonBelow%%
+            %%SNIPPET_ProductAddToCartBelow%%
+
+        </div>
+
+       
+        
+    </div>
+</div>
+
+
+<div class="tabs">
+    <ul class="tabNavigation">
+        <li><a href="#first">Product Description</a></li>
+        <li><a href="#second">Product Review</a></li>
+        <!--<li><a href="#third">Custom Product Tab</a></li>-->
+        <li><a href="#four">Find Similar Products by Category</a></li>
+    </ul>
+
+    <div id="first">%%Panel.ProductDescription%%</div>
+    <div id="second">%%Panel.ProductReviews%%</div>
+    <!--<div id="third">%%Panel.CustomProductTab%%</div>-->
+    <div id="four">%%Panel.ProductByCategory%%</div>
+</div>
+
+

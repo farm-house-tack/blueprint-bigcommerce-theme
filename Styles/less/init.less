@@ -1,0 +1,517 @@
+/**
+ *   Bigcommerce Classic Next
+ *   Style Initialisation
+ */
+
+.SortBox {
+    color: @color-secondary;
+}
+.AddToWishlistLink .wishlist-button {
+    color: @color-primary;
+}
+
+.PageMenu {
+    font-family: @font-heading-text;
+}
+
+.PageMenu .sf-menu > li > a {
+    color: @menu-text;
+}
+
+.PageMenu li ul {
+    background: @dropdown-menu;
+}
+
+.PageMenu li ul li a {
+    color: lighten(@dropdown-menu,40%);
+}
+
+.PageMenu li ul:before {
+    border-color: transparent transparent @dropdown-menu transparent;
+}
+
+.header {
+    background: @header-background;
+    border-bottom: 1px solid darken(@header-background,11%);
+}
+
+#Header > .inner {
+    background: @header-background;
+}
+
+#SearchForm .Button,
+#SearchForm input.Textbox,
+#SearchForm {
+    border: 1px solid darken(@header-background,11%);
+    background-color: #fff;
+}
+
+.page {
+    background: @page-background;
+}
+
+.footer-main {
+    background: @footer-background;
+}
+
+.footer-main h4 {
+    color: @color-column-headings;
+}
+
+.footer-main a {
+    color: @color-footer-text;
+}
+
+.footer-main a:hover {
+    color: @color-primary;
+}
+
+.footer-links {
+    background: @footer-bar-background;
+    color: @footer-bar-text;
+}
+
+.footer-links a {
+    color: @footer-bar-text;
+}
+
+.newsletter-subscription {
+    border-color: darken(@newsletter-background,11%);
+    background-color: @newsletter-background;
+}
+
+.newsletter-subscription h4 {
+    color: @color-newsletter-text;
+}
+
+// HOME PAGE SPECIFIC VARIABLES
+
+#HomeFeaturedProducts h3,
+#SideTopSellers h3,
+#HomeNewProducts h3 { 
+    color: @color-section-headings;
+}
+
+#home .ProductList .pname {
+    color: @color-product-names;
+}
+
+#home .ProductList .p-price {
+    color: @color-product-prices;
+}
+
+#home .ProductList .btn {
+    background-color: @color-buttons;
+}
+
+#home .ProductList .btn:hover {
+    background-color: lighten(@color-buttons,10%);
+}
+
+// PRODUCT PAGE SPECIFIC VARIABLES
+
+#ProductDetails h1 {
+    color: @color-product-title;
+}
+
+.PrimaryProductDetails .ProductPrice {
+    color: @color-product-price;
+}
+
+.ProductDetailsGrid, .ProductDescription {
+    color: @color-product-description;
+}
+
+#prodAccordion h2 {
+    color: @color-product-description-headings;
+}
+
+.PrimaryProductDetails .btn.add-to-cart {
+    background-color: @color-add-to-cart-button;
+}
+
+.PrimaryProductDetails .btn.add-to-cart:hover {
+    background-color: lighten(@color-add-to-cart-button,10%);
+}
+
+.PrimaryProductDetails .btn.wishTrigger {
+    border-color: @color-add-to-wishlist-button;
+    color: @color-add-to-wishlist-button;
+}
+
+.PrimaryProductDetails .btn.wishTrigger:hover {
+    border-color: lighten(@color-add-to-wishlist-button, 10%);
+    color: lighten(@color-add-to-wishlist-button, 10%);
+}
+
+// CATEGORY PAGE SPECIFIC VARIABLES
+
+#CategoryHeading .TitleHeading {
+    color: @color-category-title;
+}
+
+#CategoryContent .ProductList .pname {
+    color: @color-category-product-names;
+}
+
+#CategoryContent .ProductList .p-price {
+    color: @color-category-product-prices;
+}
+
+#CategoryContent .ProductList .ProductActionAdd .btn {
+    background-color: @color-category-list-buttons;
+}
+
+#CategoryContent .ProductList .ProductActionAdd .btn:hover {
+    background-color: lighten(@color-category-list-buttons,10%)
+}
+
+#CategoryContent .CompareButton .btn {
+    color: @color-primary;
+    border-color: @color-compare-selected-button;
+}
+
+#CategoryContent .CompareButton .btn:hover {
+    color: lighten(@color-primary,10%);
+    border-color: lighten(@color-compare-selected-button,10%)
+}              
+
+// ********************
+
+body,
+.HorizontalFormContainer dd .selector span,
+.fastCartTop div,
+.list-icon li {
+    color: @color-page-text;
+}
+
+input, select, textarea,
+input.Textbox, input[type="text"],
+#SearchForm input {
+    color: @color-tertiary;
+}
+
+#ModalContent,
+.ModalContent,
+.CurrencyChooser a span {
+    color: @color-page-text !important;
+}
+
+a,
+a.NextLink,
+.Left li li a,
+.Left #SideCategoryList li a,
+.Left .slist li a,
+.Left .afterSideShopByBrand a,
+.Left #GiftCertificatesMenu li a,
+.Left #SideAccountMenu li a,
+.Left #SideCategoryList li li a,
+.Left .slist li li a,
+.TabNav li.Active a,
+.currency-converter p span,
+.page-content #LayoutColumn2 a {
+    color: @color-link;
+}
+
+p a,
+.BlockContent.PageContent a, {
+    color: @color-link-alt;
+}
+
+p a, .BlockContent.PageContent h1 a,
+p a, .BlockContent.PageContent h2 a,
+p a, .BlockContent.PageContent h3 a,
+p a, .BlockContent.PageContent h4 a,
+p a, .BlockContent.PageContent h5 a,
+p a, .BlockContent.PageContent h6 a {
+    color: @color-page-text;
+}
+
+.header-logo a,
+.header-logo a:hover {
+    color: @color-store-name;
+}
+
+.page-content #LayoutColumn2 a.pname,
+#ModalContent a,
+.ModalContent a,
+.recaptchatable a {
+    color: @color-link;
+}
+
+.Left li a.active:hover{
+    border-color: @color-link;
+}
+
+.icon-add:hover {
+    background-color: @color-link !important;
+}
+
+.multiStep li a {
+    color: lighten(@color-link, 25%);
+}
+
+.Left li a.active,
+a:hover,
+a.alt,
+.Left #SideCategoryList li a:hover,
+.Left .slist li a:hover,
+.Left .afterSideShopByBrand a:hover,
+.Left #GiftCertificatesMenu li a:hover,
+.Left #SideAccountMenu li a:hover,
+.ModalContent h4 a:hover {
+    color: @color-link-alt;
+}
+
+.recaptchatable a:hover,
+.page-content #LayoutColumn2 a.pname:hover,
+#ModalContent a:hover,
+.ModalContent a:hover {
+    color: @color-link-alt;
+}
+
+// a.alt:hover {
+//     color: lighten(@color-link-alt,100%);
+// }
+
+.multiStep li.ActivePage h4 {
+    border-bottom: 4px solid @color-link-alt;
+}
+
+.icon-add {
+    background: @color-link-alt url("../images/add.png") no-repeat scroll 50% 50%;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: @font-heading-text;
+    color: @color-heading-text;
+}
+
+h1, .h1 {
+    font-family: @font-heading;
+    color: @color-heading;
+}
+
+.productOptionViewProductPickListWithImage td {
+    border-bottom: 1px dotted @color-border;
+}
+
+.TopMenu, .TopMenu a {
+    color: @color-header-text;
+}
+
+.TopMenu .CartLink a {
+    color: @color-primary;
+}
+
+.TopMenu li.Flag img.Selected {
+    border: 2px solid @color-border;
+}
+
+.productOptionViewRectangle .option.selectedValue label {
+    border: 1px solid @color-primary !important;
+}
+
+.productOptionPickListSwatch .selectedValue .textureContainer,
+.productOptionPickListSwatch .selectedValue .swatchColours {
+    border: @border-style !important;
+    border-color: darken(@color-border,65%) !important;
+}
+
+.productOptionPickListSwatch .textureContainer,
+.productOptionPickListSwatch .swatchColours,
+.productOptionViewRectangle .option label,
+.recaptchatable #recaptcha_response_field,
+.zoomWrapper,
+#ProductDetails .ProductTinyImageList ul li.selected {
+    border: @border-style !important;
+}
+
+.CurrencyList dd,
+select,
+hr,
+input.Textbox, textarea,
+input[type="text"],
+input[type="password"],
+.QuickSearch,
+.SharePublicWishList,
+.ExpressCheckoutBlock .ExpressCheckoutTitle,
+.TabNav li a,
+.HowToPay,
+.NotifyMessage,
+.QuickSearchResult .QuickSearchResultImage,
+.CurrencyChooser,
+div.uploader,
+div.selector {
+    border: @border-style;
+}
+
+.ExpressCheckoutBlockCompleted .ExpressCheckoutCompletedContent,
+div.uploader span.action {
+    border-left: @border-style;
+}
+
+.TitleHeading,
+.TabNav {
+    border-bottom: @border-style;
+}
+
+.ProductList.List .ProductDetails {
+    border-top: @border-style;
+}
+
+.btn {
+    background-color: @color-btn;
+    color: lighten(@color-btn, 100%);
+}
+
+.btn:hover {
+    background-color: @color-btn-hover;
+    color: lighten(@color-btn, 100%);
+}
+
+.btn.alt {
+    background-color: transparent;
+    border: 3px solid @color-primary;
+    color: @color-primary;
+}
+
+// a.btn.alt {
+//     color: @color-btn-alt;
+// }
+
+.btn.alt:hover {
+    border: 3px solid @color-secondary;
+    color: @color-secondary;
+}
+
+.btn.text {
+    color: lighten(@color-btn, 20%);
+}
+
+.TopMenu > .inner, #Header > .inner, .PageMenu > .inner, .main > .inner, .footer-main > .inner, .footer-links > .inner, .newsletter-subscription > .inner {
+    max-width: @setting-page-max-width;
+    width: @setting-page-width;
+}
+
+#home .ProductList li,
+.productPage .ProductList li {
+    width: @product-column-width;
+} 
+
+.Breadcrumb {
+    color: @color-tertiary;
+}
+
+.Breadcrumb a {
+    color: @color-link-alt;
+}
+
+table tbody tr td,
+table.General tbody tr td,
+table.CartContents tbody tr td,
+.CompareFieldName {
+    border-bottom: 1px solid @color-border;
+}
+
+.phoneIcon {
+    color: @color-primary;
+    font-weight: bold;
+}
+
+.ProductList li .ProductCompareButton {
+    color: @color-tertiary;
+}
+
+.addto {
+    border-top: 1px solid @color-border;
+}
+
+#prodAccordion .Block {
+    border-bottom: 1px solid @color-border;
+}
+
+.productOptionViewRectangle .option label {
+    color: @color-secondary;
+}
+
+.productOptionViewRectangle .option.selectedValue label {
+    color: @color-primary;
+}
+
+.ProductDetailsGrid .DetailRow.product-rating {
+    border-top: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
+}
+
+.Meta {
+    color: @color-secondary; 
+}
+
+.ProductReviewList li {
+    border-bottom: 1px solid @color-border;
+}
+
+.borderB {
+    border-bottom: 1px solid @color-border;
+}
+
+.borderR {
+    border-right: 1px solid @color-border;
+}
+
+.txt24 {
+    font-family: @font-heading;
+}
+
+.PageMenu li ul ul {
+    border-left: 1px solid lighten(@color-primary,10%) !important;
+}
+
+.EstimateShipping {
+    border: 1px solid @color-border;
+}
+
+.CartContents tfoot .SubTotal td {
+    border-top: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
+}
+
+.Left #SideCategoryList .SideCategoryListFlyout > ul > li,
+ul.side-menu li {
+    border-bottom: 1px solid @color-border;
+}
+
+/* --- Responsive --- */
+
+/* 768px */
+@media screen and (max-width: 768px) {
+
+    .TabNav li.Active a {
+        border-bottom: @border-style;
+    }
+}
+
+/* 600px */
+@media screen and (max-width: 600px) {
+
+    .BillingDetails, .ShippingDetails {
+        border-top: @border-style;
+    }
+
+}
+
+/* 480px */
+@media screen and (max-width: 480px) {
+
+    #cart-amount .Cart .total {
+        background: @color-primary;
+        color: lighten(@color-primary, 100%);
+    }
+
+    #cart-amount .Cart .bag-handle {
+        border: 2px solid @color-primary;
+    }
+
+}
+

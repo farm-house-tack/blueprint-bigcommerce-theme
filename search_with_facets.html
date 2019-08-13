@@ -1,0 +1,41 @@
+%%Panel.HTMLHead%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <div class="page">
+            %%Panel.Header%%
+            <div class="main">
+                <div class="container">
+                    %%Panel.WrapperBanner%%
+                    <div class="Content Widest" id="LayoutColumn1">
+                        %%Banner.TopBanner%%
+                        <h1 class="TitleHeading">Search Results</h1>
+                        <div class="full-width">
+
+                            <div class="Block Moveable Panel pvm" id="SearchPageHeader">
+                                <script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/jstree/jquery.jstree.js"></script>
+                                <p class="txt24">%%GLOBAL_SearchTitle%%</p>
+
+                                <a name="results"></a>
+
+                                <p class="InfoMessage" style="display:%%GLOBAL_HideRelatedSearches%%">
+                                    %%LNG_RelatedSearches%%: %%SNIPPET_RelatedSearches%%
+                                </p>
+
+                                <p class="SearchSuggest" style="display: %%GLOBAL_ShowSearchSuggestion%%">
+                                    <strong>%%LNG_DidYouMean%%:</strong> <a class="nofollow" rel="nofollow" data-params="&amp;correction=%%GLOBAL_SearchId%%" href="%%GLOBAL_ShopPath%%/search.php?search_query=%%GLOBAL_SuggestQueryEscaped%%">%%GLOBAL_SuggestQuery%%</a>
+                                </p>
+
+                                %%Panel.SearchJavaScript%%
+                            </div>
+
+                            %%Panel.SearchPageWithFacets%%
+                        </div>
+                        %%Banner.BottomBanner%%
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            %%Panel.Footer%%
+        </div>
+    </body>
+</html>

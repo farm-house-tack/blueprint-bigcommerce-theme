@@ -1,0 +1,93 @@
+ <script type="text/javascript">
+     
+// Append Images in MegaMenu
+ function hlmegamenu (num_menu,$_Images_Menu,$_ColRightMegamenu){
+     var countLi = jQuery("#SideCategoryList ul.sf-menu:first-child > li:nth-child("+num_menu+") > ul > li").length;
+     jQuery("#SideCategoryList ul.sf-menu:first-child > li:nth-child("+num_menu+")").addClass("HL-HasMegamenu");
+     var $_Dropdownmenu = jQuery("#SideCategoryList ul.sf-menu:first-child > li:nth-child("+num_menu+") > ul").html();
+    
+     
+ 
+    jQuery("#SideCategoryList ul.sf-menu:first-child > li:nth-child("+num_menu+")").append('<ul class="Wrapper-Megamenu StandardMegamenu"><li class="WrapperCategory"><ul>'+$_Dropdownmenu+"</ul></li></ul>");
+     
+    jQuery("#SideCategoryList ul.sf-menu:first-child > li:nth-child("+num_menu+") > a + ul").remove();
+    }
+jQuery(document).ready(function(){
+    for (var i = 0; i < megamenu.length; i++)
+        hlmegamenu (megamenu[i]);
+        
+       
+});// End Append Images in MegaMenu
+
+
+</script>
+<script type="text/javascript">
+ function fixMegaMenuOverflow() {
+    function fix($container, $nav) {
+        var pad = $nav.offset().left + $nav.outerWidth() - ($container.offset().left + $container.outerWidth());
+        var pad2 = $container.offset().left + pad - $nav.offset().left;
+        if (pad2 < 0) pad = pad - pad2;
+        if (pad < 0){
+            $container.css('left', pad+'px');
+        }
+    }
+
+    jQuery('.PageMenu .CategoryList > div > div > ul > li.menu-parent > ul.menu-container-level-1').parent().hover(function() {
+        var $container = jQuery(this).children('ul.menu-container-level-1');
+        if(jQuery(this).hasClass('menu-parent'))
+            $container.css('left',-1);
+        var $nav = jQuery(this).parents('.PageMenu .CategoryList > div > div').first();
+        fix($container, $nav);
+    }, function() {
+        jQuery(this).children('ul.menu-container-level-1').css('left', '');
+    });
+};
+
+    function fixMegaMenuOverflowMega() {
+    function fix($container, $nav) {
+        var pad = $nav.offset().left + $nav.outerWidth() - ($container.offset().left + $container.outerWidth());
+        var pad2 = $container.offset().left + pad - $nav.offset().left;
+        if (pad2 < 0) pad = pad - pad2;
+        if (pad < 0){
+            $container.css('left', pad+'px');
+        }
+    }
+
+    jQuery('.PageMenu .CategoryList > div > div > ul > li.menu-parent > .Wrapper-Megamenu.menu-container-level-1').parent().hover(function() {
+        var $container = jQuery(this).children('ul.Wrapper-Megamenu.menu-container-level-1');
+        if(jQuery(this).hasClass('menu-parent'))
+            $container.css('left',-1);
+        var $nav = jQuery(this).parents('.PageMenu .CategoryList > div > div').first();
+        fix($container, $nav);
+    }, function() {
+        jQuery(this).children('ul.Wrapper-Megamenu.menu-container-level-1').css('left', '');
+    });
+};
+
+jQuery(document).ready(function() {
+    jQuery('.PageMenu .CategoryList > div > div > ul > li').has('ul').addClass('menu-parent');
+    jQuery('.PageMenu .CategoryList > div > div > ul > li').children('ul').addClass('menu-container-level-1');
+});
+
+
+jQuery(window).load(function(){
+    fixMegaMenuOverflow();
+    fixMegaMenuOverflowMega();
+});
+</script>
+<script>       
+     $(window).load(function() {
+    jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul').addClass('js-masonry');
+    jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul > li').addClass('grid-item');
+    jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul').attr('data-masonry-options','{ "itemSelector": ".grid-item" }');
+ jQuery('.PageMenu li.HL-HasMegamenu').hover(function(){
+jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul').css('visibility', 'hidden')
+jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul').masonry({
+  // options
+  itemSelector: '.grid-item'
+});
+jQuery('.PageMenu li.HL-HasMegamenu .WrapperCategory > ul').css('visibility', 'visible')
+})
+    });
+   
+</script>

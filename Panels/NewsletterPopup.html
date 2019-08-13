@@ -1,0 +1,99 @@
+
+<script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function($) {
+    var $modalParent        = $('div.wrapper'),
+        modalWindow         = $('#email-modal'),
+        emailModal          = $('#email-modal');
+
+    modalWindow = modalWindow.html();
+    modalWindow = '<div id="email-modal">' + modalWindow + '</div>';
+    $modalParent.css({'position':'relative'});
+    //
+    // remove 'original' modal
+    $('.widget #email-modal').remove();
+    // append modal to .wrapper
+    $modalParent.append(modalWindow);
+    
+    if ($.cookie('emailSubcribeModal') != 'closed') {
+        openEmailModalWindow();
+    };
+     
+    //
+    // Modal Window Close Events - 'X' Close Button & 'esc' Key Press
+    $('#email-modal .btn.close').click(function(e) {
+        e.preventDefault();
+        closeEmailModalWindow();
+    });
+
+    $('body').keydown(function(e) {
+        // console.log('KEY : '+e.which);
+        if( e.which == 27) {
+            closeEmailModalWindow();
+            $('body').unbind('keydown');
+        }
+    });
+
+    $('#embed-newsletter .email').keydown(function(e) {
+        if( e.which == 13) {
+            $('#embed-newsletter .button').trigger('click');            
+        }
+    });
+    
+    $('#embed-newsletter .button').click(function() {
+        if ($('#embed-newsletter .email').val() == '') {
+            alert('%%LNG_NewsletterEnterEmail%%');
+            $('#embed-newsletter .email').focus();
+            return false;            
+        }
+        if($('#embed-newsletter .email').val().indexOf('@') == -1 || $('#embed-newsletter .email').val().indexOf('.') == -1) {
+            alert('%%LNG_NewsletterEnterValidEmail%%');
+            $('#embed-newsletter .email').focus();
+            $('#embed-newsletter .email').select();
+            return false;
+        }        
+        $.cookie('emailSubcribeModal', 'closed', {expires:100, path:'/'});
+        $('#nl_email').val($('#embed-newsletter .email').val());
+        $('#subscribe_form').submit();
+    });
+     
+    function closeEmailModalWindow () {
+        $('#email-modal .modal-window').fadeOut(600, function() {
+            $('#email-modal .modal-overlay').fadeOut(600, function() {
+                $('#email-modal').css({'display':'none'});
+                $.cookie('emailSubcribeModal', 'closed', {expires:7, path:'/'});
+            });
+        })
+    }
+    function openEmailModalWindow () {         
+        $('#email-modal').delay(800).fadeIn(600, function() {
+           $('#email-modal .modal-window').fadeIn(600);
+        });
+    }
+     
+});
+// ]]
+// ]]></script>
+<div id="email-modal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-window" style="display: none;">
+        <div class="window-window">
+            <div class="window-content">
+                <a class="btn close" title="Close Window">Close Window </a>
+                <div class="wrapEmail">
+                    <h2 class="title">Join Our Mailing List<span>Sign Up for exclusive updates, new arrivals and insider-only discounts</span></h2>
+                    <div id="embed-newsletter">                                
+                          <input class="email" onclick="this.value=='email address'?this.value='':''" onblur="this.value==''?this.value='email address':''" type="text" name="email" value="email address" />
+                          <button class="button" title="Subscribe" type="submit"><span><span>Subscribe</span></span></button>
+                        </div> 
+                    <h2 class="message">Sign Up for exclusive updates, new arrivals and insider-only discounts</h2>
+                    <div class="social-popup">
+                        %%Panel.SocialLinks%%
+                    </div>
+                </div><!-- wrapEmail -->
+                <div class="imgEmail">
+                    <img src="../product_images/uploaded_images/module-image-1.jpg" alt="" />
+                </div><!-- imgEmail -->
+            </div>
+        </div>
+    </div>
+</div> <!-- email-modal -->

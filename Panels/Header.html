@@ -1,0 +1,51 @@
+<header class="header">
+        
+        <div id="AjaxLoading">
+            <div class="ajax-loader">
+                <img src="%%GLOBAL_IMG_PATH%%/loader.png" alt="" />&nbsp;%%LNG_LoadingPleaseWait%%
+            </div>
+        </div>
+
+        %%GLOBAL_MaintenanceNotice%%
+        %%Panel.TopMenu%%
+
+        <div id="Header">
+            <div class="container">
+                <div class="row">                   
+                    
+                    <div class="header-logo col-sm-4">
+                        %%GLOBAL_HeaderLogo%%
+                    </div>
+        <div class="header-top col-sm-4 alpha">
+                        %%Panel.HeaderFreeShippingText%%
+                    </div>
+                    <div class="wrapAccount">                        
+                       
+                        <ul>
+                            <li style="display:%%GLOBAL_HideAccountOptions%%" class="First">
+                                <a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>
+                            </li>
+                            <li style="display:%%GLOBAL_HideWishlist%%"><a href="%%GLOBAL_ShopPath%%/wishlist.php">%%LNG_YourWishList%%</a></li>
+                        </ul>
+                    </div>
+                    <div class="TopCart col-sm-4 omega">
+                        <div class="item-cart">
+                            <div class="last CartLink" style="display:%%GLOBAL_HideCartOptions%%">
+                                            
+                                              
+                                <i class="icon icon-cart" title="View Cart">&nbsp;</i><a href="/cart.php" title="%%LNG_ViewCart%%" id="ShowDropdownCart"> <span id="items-count">SHOPPING BAG %%GLOBAL_CartItems%%</span></a>
+                            </div>  
+                        </div>
+                        %%Panel.HeaderSearch%%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="PageMenu">
+            <div class="container">
+                %%Panel.SideCategoryList%%
+            </div>
+        </div>
+    
+</header>

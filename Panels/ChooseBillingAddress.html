@@ -1,0 +1,25 @@
+	<div class="Block Moveable Panel ExpressCheckoutBlock" id="ChooseBillingAddress">
+		<a title="Add Address" class="icon-add" href="/account.php?action=add_shipping_address&from=checkout.php%3Faction%3Dchoose_billing_address"></a>
+		
+		<h2>%%GLOBAL_CheckoutShippingTitle%%</h2> 
+
+		<ul class="multiStep">
+			<li class="ActivePage"><h4>Billing Address</h4></li>
+			<li class=""><h4>Shipping Address</h4></li>
+			<li class=""><h4>Shipping Method</h4></li>
+			<li class=""><h4>Order Confirmation</h4></li>	
+		</ul>
+
+		<p>%%GLOBAL_CheckoutShippingIntro%%</p>
+		
+		%%Discount.FreeShippingEligibility%%
+		<div class="BlockContent">
+			<div class="">
+				<ul class="ShippingAddressList">
+					%%SNIPPET_ShippingAddressList%%
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	%%Panel.ChooseShippingAddressJavaScript%%

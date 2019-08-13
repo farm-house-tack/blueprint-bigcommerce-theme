@@ -1,0 +1,27 @@
+<div class="Block NewProducts Moveable Panel" id="HomeNewProducts" style="display:%%GLOBAL_HideHomeNewProductsPanel%%">
+    <h3>%%SNIPPET_HomeNewProductsFeed%%%%LNG_NewProducts%%</h3>
+    <div class="BlockContent">
+        <div class="new-product-owl ProductList">
+            %%SNIPPET_HomeNewProducts%%
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+             $(".new-product-owl").owlCarousel({ 
+                navigation: true,
+                navigationText: false,
+                pagination: false,
+                nav: true,
+                items: 5,
+                itemsDesktop : [1199,4],
+                itemsDesktopSmall : [979,3],
+                itemsTablet: [768,3],
+                itemsTabletSmall: [540,2],
+                itemsMobile : [360,1]           
+             });
+        });
+    </script>
+
+    <div class="clear"></div>
+</div>

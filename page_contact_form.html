@@ -1,0 +1,78 @@
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.main').addClass('contact-wrapper');
+    });
+</script>
+
+<div class="mapContact">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.7006709550187!2d-82.21871668446249!3d35.18901236441561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859d88192077a05%3A0xa3233c827a14360!2s22341+Asheville+Hwy%2C+Landrum%2C+SC+29356!5e0!3m2!1sen!2sus!4v1448459318654" width="100%" height="350"" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="wrapContactForm">
+    <div class="contactForm">
+        <p class="txtInfo-3">Complete our online inquiry form below.</p>
+        <p class="ErrorMessage" style="display: %%GLOBAL_HideFormError%%">
+            %%LNG_BadContactFormCaptcha%%
+        </p>
+
+        <form action="%%GLOBAL_ShopPath%%/pages.php?action=sendContactForm" method="post" id="ContactForm">
+            <input type="hidden" name="page_id" id="page_id" value="%%GLOBAL_PageId%%" />
+            <div class="FormContainer HorizontalFormContainer">
+                <dl>
+                    <dt style="display: %%GLOBAL_HideFullName%%">%%LNG_ContactName%%</dt>
+                    <dd style="display: %%GLOBAL_HideFullName%%"><input type="text" name="contact_fullname" id="contact_fullname" class="Textbox Field200" value="%%GLOBAL_ContactName%%" /></dd>
+
+                    <dt><span class="Required">*</span>%%LNG_ContactEmail%%</dt>
+                    <dd><input type="text" name="contact_email" id="contact_email" class="Textbox Field200" value="%%GLOBAL_ContactEmail%%" /></dd>
+
+                    <dt style="display: %%GLOBAL_HideCompanyName%%">%%LNG_ContactCompanyName%%</dt>
+                    <dd style="display: %%GLOBAL_HideCompanyName%%"><input type="text" name="contact_companyname" id="contact_companyname" class="Textbox Field200" value="%%GLOBAL_ContactCompanyName%%" /></dd>
+
+                    <dt style="display: %%GLOBAL_HidePhone%%">%%LNG_ContactPhone%%</dt>
+                    <dd style="display: %%GLOBAL_HidePhone%%"><input type="text" name="contact_phone" id="contact_phone" class="Textbox Field200" value="%%GLOBAL_ContactPhone%%" /></dd>
+
+                    <dt style="display: %%GLOBAL_HideOrderNo%%">%%LNG_ContactOrderNo%%</dt>
+                    <dd style="display: %%GLOBAL_HideOrderNo%%"><input type="text" name="contact_orderno" id="contact_orderno" class="Textbox Field200" value="%%GLOBAL_ContactOrderNo%%" /></dd>
+
+                    <dt style="display: %%GLOBAL_HideRMANo%%">%%LNG_ContactRMANo%%</dt>
+                    <dd style="display: %%GLOBAL_HideRMANo%%"><input type="text" name="contact_rma" id="contact_rma" class="Textbox Field200" value="%%GLOBAL_ContactRMA%%" /></dd>
+
+                    <dt><span class="Required">*</span>%%LNG_ContactQuestion%%</dt>
+                    <dd><div class="borBox"><textarea name="contact_question" id="contact_question" class="Field300" rows="5" cols="50">%%GLOBAL_ContactQuestion%%</textarea></div><div id="SearchResults"></div></dd>
+
+                    <dt style="display: %%GLOBAL_HideCaptcha%%"><span class="Required">*</span>%%LNG_CaptchaVerification%%</dt>
+                    <dd style="display: %%GLOBAL_HideCaptcha%%">
+                            <p class="Warning">%%LNG_CaptchaIntro%%</p>
+                            %%GLOBAL_CaptchaImage%%<br>
+                            <input style="margin-top:10px; width:105px" type="text" name="captcha" id="captcha" class="Textbox" />
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        <p class="Submit">
+                            <input type="submit" value="%%LNG_SendForm%%" class="btn" />
+                        </p>
+                    </dd>
+
+                </dl>
+                
+            </div>
+        </form>
+
+        %%Panel.ContactFormJavaScript%%
+
+        %%GLOBAL_ARSPanel%%
+    </div>
+    <div class="contactInfo">
+        <h3>Store Location</h3>
+        <p class="contactName">22341 Asheville Hwy, <br />Landrum, SC 29356.</p>
+        <p class="contactEmail">
+            <strong>Email:</strong><a href="mailto:sales@farmhousetack.com "> sales@farmhousetack.com </a>
+            <span>(864)457-3557</span>
+        </p>
+        <p class="contactTime">
+            <span>Opening Hours:</span>
+            <span>Monday to Friday: 9am - 6pm</span>
+            <span>Saturday: 9am - 4pm</span>
+            <span>Sunday: 10am - 3pm</span>
+        </p>
+    </div>
+</div>

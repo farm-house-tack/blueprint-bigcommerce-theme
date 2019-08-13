@@ -1,0 +1,58 @@
+%%Panel.HTMLHead%%
+    <body class="productPage">
+        <script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/jquery/plugins/validate/jquery.validate.js?%%GLOBAL_JSCacheToken%%"></script>
+        <script type="text/javascript" src="%%ASSET_js/product.functions.js%%"></script>
+        <script type="text/javascript" src="%%GLOBAL_CdnAppPath%%/javascript/product.js?%%GLOBAL_JSCacheToken%%"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(function () {
+            var tabContainers = $('div.tabs > div');
+            tabContainers.hide().filter(':first').show();
+            $('div.tabs ul.tabNavigation a').click(function () {
+            tabContainers.hide();
+            tabContainers.filter(this.hash).show();
+            $('div.tabs ul.tabNavigation a').removeClass('selected');
+            $(this).addClass('selected');
+            return false;
+            }).filter(':first').click();
+            });
+        </script>
+        %%Panel.DrawerMenu%%
+        <section class="page">
+            %%Panel.Header%%
+            <section class="main">
+                %%Panel.ProductBreadcrumb%%
+                <section class="container">
+                    %%Panel.WrapperBanner%%
+                    %%Panel.ProductDetails%%
+                    %%Panel.SimilarProductsByCustomerViews%%
+                    %%Panel.SideProductRelated%% 
+                    %%Panel.RichSnippets%% 
+                    <div class="clear"></div>
+
+                </section>
+            </section>
+            %%Panel.Footer%%
+
+            <script type="text/javascript">
+            $(document).ready(function() {
+                if($('.videoRow').size() > 0) {
+                    $('.videoRow').bind('click', function () {
+                        var videoId = $(this).attr('id').replace('video_', '');
+                        $('#FeaturedVideo').html('<object>'
+                            + '<param name="movie" value="http://www.youtube.com/v/' + videoId + '?fs=1"></param>'
+                            + '<param name="allowFullScreen" value="true"></param>'
+                            + '<param name="allowscriptaccess" value="always"></param>'
+                            + '<embed src="http://www.youtube.com/v/'  + videoId + '?&fs=1&autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true"></embed>'
+                            + '</object>'
+                            );
+                        selectCurrentVideo(videoId);
+                    });
+                }
+            });
+            </script>
+        </section>
+
+
+
+    </body>
+</html>

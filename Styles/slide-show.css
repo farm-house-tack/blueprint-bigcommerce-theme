@@ -1,0 +1,54 @@
+.container.#HomeSlideShow {
+    float: right;
+    width: 915px;}
+.flexslider {
+    position: relative;
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+}
+
+.slide-show h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 34px;
+    font-weight: 300;
+}
+
+.slide-show li.slide {
+    position: relative;
+}
+
+.slide-show .slide-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-shadow: 0 0 .5em rgba(0,0,0,1);
+}
+
+.slide-show h2,
+.slide-show .slide-text {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0;
+    line-height: 2em;
+    letter-spacing: 1px
+}
+
+.flex-control-nav {
+    bottom: 20px !important;
+}
+
+.slide-show .slide-overlay {
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    top: 30%;
+    text-align: center;
+}
+
+.flex-direction-nav .flex-next {
+    right: 0px;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0px;
+}

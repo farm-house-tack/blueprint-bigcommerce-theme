@@ -1,0 +1,128 @@
+/* Default social icons. Do not modify. */
+
+.icon-social {
+    /*background: url('%%GLOBAL_TPL_PATH%%/images/sprite-social-default.png') no-repeat;*/
+     background: url(%%ASSET_images/list_sprite6.png%%) no-repeat ;
+     height: 21px;
+     width: 25px;
+    
+}
+
+.icon-facebook {
+    background-position: -482px -336px;
+    height: 21px;
+    width: 20px;
+}
+.is-disabled.icon-facebook {
+
+}
+.icon-facebook:hover,
+.icon-facebook:focus {
+
+}
+
+.icon-googleplus {
+    background-position: -40px -1138px;
+}
+.is-disabled.icon-googleplus {
+
+}
+.icon-googleplus:hover,
+.icon-googleplus:focus {
+}
+
+.icon-tumblr {
+    background-position: -74px -1136px;
+}
+.is-disabled.icon-tumblr {
+}
+.icon-tumblr:hover,
+.icon-tumblr:focus {
+}
+
+.icon-twitter {
+    background-position: -500px -336px;
+    height: 21px;
+    width: 25px;
+}
+.is-disabled.icon-twitter {
+}
+.icon-twitter:hover,
+.icon-twitter:focus {
+}
+
+.icon-pinterest {
+    background-position: -212px -1138px;
+}
+.is-disabled.icon-pinterest {
+}
+.icon-pinterest:hover,
+.icon-pinterest:focus {
+}
+
+.icon-stumbleupon {
+    background-position:-104px -1136px;
+}
+.is-disabled.icon-stumbleupon {
+}
+.icon-stumbleupon:hover,
+.icon-stumbleupon:focus {
+}
+
+.icon-youtube {
+     background-position: -535px -334px;
+    height: 21px;
+    width: 50px;
+}
+.is-disabled.icon-youtube {
+}
+.icon-youtube:hover,
+.icon-youtube:focus {
+}
+
+.icon-linkedin     {
+    background-position: -180px -1138px;
+    height: 21px;
+    width: 25px;
+}
+.is-disabled.icon-linkedin {
+}
+.icon-linkedin:hover,
+.icon-linkedin:focus {
+}
+
+.icon-rss {
+    background-position: -287px -1138px;
+}
+.is-disabled.icon-rss {
+}
+.icon-rss:hover,
+.icon-rss:focus {
+}
+
+/* Theme's custom social icons. Can modify below */
+
+/* Social icons */
+
+.footer-main .SocialConnect ul {
+    text-align: right;
+}
+
+.footer-main .SocialConnect li {
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+    float: none;
+}
+
+.icon-social {
+    display: inline-block;
+    text-align: left;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+
+.icon-social.icon-social-theme {
+    /*background-image: url('%%GLOBAL_TPL_PATH%%/images/sprite-social.png');*/
+    /*background: url(%%ASSET_images/list_sprite.png%%) no-repeat ;*/
+}

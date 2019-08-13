@@ -1,0 +1,57 @@
+
+<div class="Block Moveable Panel no-ptop" id="CreateAccountForm">
+    <h1 class="TitleHeading">%%GLOBAL_CreateAccountHeading%%</h1>
+    <div class="BlockContent BlockContent full-width page-content">
+        <p style="display: %%GLOBAL_HideCreateAccountIntroMessage%%" class="txt24 blockquote mtm">
+            %%LNG_CreateAccountIntro4%% <em>%%GLOBAL_StoreName%%</em> %%LNG_CreateAccountIntro5%%
+        </p>
+        <p class="ErrorMessage" style="display:%%GLOBAL_HideCreateAccountErrorMessage%%">
+            %%GLOBAL_ErrorMessage%%
+        </p>
+        <form action="%%GLOBAL_ShopPath%%/login.php?action=save_new_account" method="post" onsubmit="return check_create_account_form()">
+            <div class="FormContainer HorizontalFormContainer form">
+                <div class="box borderB">    
+                    <h3>%%LNG_PersonalDetails%%</h3>
+
+                    <div class="innerfrmAccount">
+                        <p class="titInfo-3">%%LNG_CreateAccountPersonalIntro%%</p>
+                        %%GLOBAL_CreateAccountEmailPassword%%
+                    </div>
+                </div>
+                <div class="box borderB">
+                    <h3>%%LNG_ShippingDetails%%</h3>
+                    <div class="innerfrmAccount">
+                        <p class="titInfo-3">%%LNG_CreateAccountShippingIntro%%</p>
+                        %%GLOBAL_CreateAccountDetails%%
+                        <dl>
+                            <dt style="display: %%GLOBAL_HideReviewCaptcha%%">Security Question</dt>
+                            <dd style="display: %%GLOBAL_HideReviewCaptcha%%">
+                                
+                                %%GLOBAL_ReCaptchaMarkup%%
+                                
+                            </dd>
+                        </dl>
+                        <p class="Submit">
+                            <input type="submit" class="btn alt" value="%%GLOBAL_CreateAccountButtonText%%" />&nbsp;&nbsp;&nbsp;<a href="%%GLOBAL_ShopPath%%/">Return to store</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+        $('.FormField').addClass("Field200 Textbox");
+        $(document).ready(function() {
+            $('#FormField_11').change(function() {
+                $.uniform.restore('select.JSHidden');
+                $(document).ajaxComplete(function(event,request, settings) {
+                    $('select').not('.UniApplied').uniform();
+                });
+            });
+        });
+        $(window).load(function() {
+            $('select').not('.UniApplied').uniform();
+        });
+        </script>
+        %%Panel.CreateAccountJavaScript%%
+    </div>
+</div>

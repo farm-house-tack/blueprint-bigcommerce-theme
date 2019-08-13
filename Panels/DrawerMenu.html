@@ -1,0 +1,27 @@
+    %%GLOBAL_OptimizerLinkScript%%    
+<div id="DrawerMenu">
+    <div class="container">
+        <ul class="sf-menu main-menu">
+            <li><a href="/">Home</a></li>
+        </ul>
+        %%Panel.SideCategoryList%%
+        <ul class="sf-menu topmenu-options" style="display:%%GLOBAL_HidePurchasingOptions%%">
+            <li style="%%GLOBAL_LiveChatCodeEnabled%%" class="HeaderLiveChat">
+                %%GLOBAL_LiveChatCode%%
+            </li>
+            <li style="display:%%GLOBAL_HideAccountOptions%%" class="First">
+                <a href="%%GLOBAL_ShopPath%%/account.php">%%LNG_YourAccount%%</a>
+            </li>
+            <li style="display:%%GLOBAL_HideAccountOptions%%">
+                <div>%%GLOBAL_LoginOrLogoutText%%</div>
+            </li>
+            <li %%GLOBAL_ShowStorePhoneNumber%%>
+                <a href="tel:%%GLOBAL_StorePhoneNumber%%">Call us</a>
+            </li>
+            %%SNIPPET_TopMenuGiftCertificates%%
+        </ul>
+    </div>
+</div>
+%%Panel.HL-Megamenu%%
+%%Panel.HL-MegamenuJS%%
+%%Panel.DrawerMenuJavascript%%

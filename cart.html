@@ -1,0 +1,36 @@
+%%Panel.HTMLHead%%
+    <body>
+        <script type="text/javascript" src="%%GLOBAL_TPL_PATH%%/js/cart.js?%%GLOBAL_JSCacheToken%%"></script>
+        %%Panel.DrawerMenu%%
+        <section class="page">
+            %%Panel.Header%%
+            <section class="main">
+                %%Panel.CartBreadcrumb%%
+                <section class="container">
+                    <div class="Content Widest" id="LayoutColumn1">
+                        %%Panel.CartHeader%%
+                        <section class="fullwidth">
+                            %%Panel.CartStatusMessage%%
+                            %%Panel.CartContent%%
+                            <div class="CartCode cf">
+                                %%Panel.CartCouponCodeBox%%
+                                %%Panel.CartGiftCertificateCodeBox%%
+                            </div>
+                        </section>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+            </section>
+            <script type="text/javascript">
+ var ju_cart_arrary = ju_cart_arrary || [];
+ window.juapp=window.juapp||function(){(window.juapp.q=window.juapp.q||[]).push(arguments)}
+ juapp(
+ 'cartItems', 
+ '', 
+ ju_cart_arrary
+ );
+</script>
+            %%Panel.Footer%%
+        </section>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+%%Panel.HTMLHead%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <section class="page">
+            %%Panel.Header%%
+            <section class="main">
+                %%Panel.CategoryBreadcrumb%%
+                <section class="container">
+                    %%Panel.WrapperBanner%%
+                    <div class="productlist-page ">
+                        
+                   
+                        <div class="Left fleft " id="LayoutColumn1">
+                            <!-- %%SNIPPET_SubCategories%% -->
+                            %%Panel.SideCategoryList%%
+                            %%Panel.SideCategoryShopByPrice%%
+                            %%Panel.SideShopByBrand%%
+                             %%Banner.TopBanner%%
+                        </div>
+                        <div class="Content Wide %%GLOBAL_ExtraCategoryClass%%" id="LayoutColumn2">
+                            %%Panel.CategoryHeading%%
+                            <div class="product-nav">
+                                %%SNIPPET_CategorySortBox%%
+                                %%Panel.CategoryPagingTop%%
+                                <div class="clear"></div>
+                            </div>
+                            %%Panel.CategoryContent%%
+                        </div>
+                      
+                        <div class="clear"></div>
+                        %%Banner.BottomBanner%%
+                    </div>
+                </section>
+            </section>
+			    <Script type="text/javascript" >
+var google_tag_params = {
+ecomm_pagetype: 'category'
+};
+</script>
+            %%Panel.Footer%%
+        </section>
+    </body>
+</html>

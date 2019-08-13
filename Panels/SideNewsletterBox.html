@@ -1,0 +1,56 @@
+%%GLOBAL_NewsletterBoxControlScript%%
+<section class="newsletter-subscription" id="SideNewsletterBox">
+    <div class="container">
+        <div class="innerNewletter">
+            <div class="row">
+            %%GLOBAL_NewsletterHeaderOptimizerScriptTag%%
+            %%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+            <form action="%%GLOBAL_ShopPath%%/subscribe.php" method="post" id="subscribe_form" class="subscribe_form col-sm-5" name="subscribe_form">
+                <input type="hidden" name="action" value="subscribe" />
+
+                <label for="nl_email">newsletter sign up</label>
+                <div class="inner-form-subscribe">
+                    <input type="hidden" value="Name" id="nl_first_name" name="nl_first_name" type="text">
+                    <input class="Textbox autobox" value="email address" id="nl_email" name="nl_email" type="email address" />
+
+                    %%GLOBAL_NewsletterButtonOptimizerScriptTag%%
+                    <input value="Submit" class="btn" type="submit" />
+                </div>
+                %%GLOBAL_NewsletterBoxOptimizerNoScriptTag%%
+
+            </form>
+            <div class="footer-top col-sm-7">
+				<div class="col-sm-6">
+                    <div class="FooterLinkMore">
+                         <a href="#" title="Avenues"><span>864-457-3557 </span></a>       
+                    </div>
+				</div>
+				<div class="col-sm-6">
+                <!-- BEGIN social_icon -->
+                    <div class="social_icon last" style="display:;">
+                      <!-- FaceBook Like Button Code -->
+                      <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true"></div>
+                        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+                        
+                     <!-- social_icon -->
+                        %%Panel.SocialLinks%%
+                    
+                    </div>
+                 <!-- END social_icon  -->
+                </div>
+            </div><!-- footer-top END -->
+            </div><!-- row -->
+        </div><!-- innerNewletter -->       
+    </div>
+</section>
+%%Panel.NewsletterJavaScript%%
+%%Panel.NewsletterPopup%%
+
+

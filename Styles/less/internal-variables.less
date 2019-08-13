@@ -1,0 +1,62 @@
+/**
+ *   Bigcommerce Blueprint with Less
+ *   – For the Less variables and functions that you don't want available in the Style Editor, declare them in this file.
+ */
+
+
+/**
+ *   Colors
+ *   Prefix with '@color-'
+ */
+
+@color-primary:                             #333;       // Dark gray
+@color-secondary:                           #999;       // Gray
+@color-tertiary:                            #bebebe;    // Light gray
+
+/**
+ *   Settings
+ *   Prefix with '@setting-'
+ */
+
+@setting-page-width:                        90%;
+@setting-page-max-width:                   1000px;
+
+
+/**
+ *   CSS Assignments
+ */
+
+// HEADER
+@header-background:                         @color-header-background;
+@color-header-text:                         darken(@color-header-background,30%);
+@dropdown-menu:                             @color-dropdown-menu;
+@menu-text:                                 @color-menu-text;
+
+//PAGE
+@page-background:                           @color-page-background;
+
+// FOOTER
+@newsletter-background:                     @color-newsletter-background;
+@footer-background:                         @color-footer-background;
+@footer-bar-background:                     @color-footer-bar-background;
+@footer-bar-text:                           @color-footer-bar-text;
+
+// DESIGN ELEMENTS
+@border-style:                              1px solid @color-border;
+@color-border:                              #e3e3e3;
+
+// LAYOUT
+@product-column-width:                      percentage(100/@setting-product-columns/100);
+
+// UI ELEMENTS
+@color-btn:                                 @color-primary;
+@color-btn-hover:                           lighten(@color-buttons,10%);
+@color-btn-alt:                             #fff;
+@color-btn-alt-hover:                       @color-primary;
+
+// TEXT
+@color-page-text:                           @color-primary;
+@color-link:                                @color-primary;
+@color-link-alt:                            @color-secondary;
+@color-heading:                             @color-primary;
+@color-heading-text:                        @color-primary;

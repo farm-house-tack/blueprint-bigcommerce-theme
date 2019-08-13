@@ -1,0 +1,24 @@
+<div class="Block TopSellers Moveable Panel" id="SideTopSellers" style="display:%%GLOBAL_HideSideTopSellersPanel%%">
+    <h3>%%LNG_CurrentTopSellers%%</h3>
+    <div class="BlockContent">
+        <div class="ProductList TopSellersSlider">
+            %%SNIPPET_SideTopSellers%%
+        </div>
+    </div>
+     <script type="text/javascript">
+        $(document).ready(function() {
+             $(".TopSellersSlider").owlCarousel({ 
+                navigation: true,
+                navigationText: false,
+                pagination: false,
+                nav: true,
+                items: 5,
+                itemsDesktop : [1199,4],
+                itemsDesktopSmall : [979,3],
+                itemsTablet: [768,3],
+                itemsTabletSmall: [540,2],
+                itemsMobile : [360,1]           
+             });
+        });
+    </script>
+</div>

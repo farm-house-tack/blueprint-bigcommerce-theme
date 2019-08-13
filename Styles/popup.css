@@ -1,0 +1,180 @@
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* General */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: Arial, Sans-Serif;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+input, select, textarea {
+    font-family: Arial, Sans-Serif;
+    font-size: 12px;
+    color: #333;
+}
+
+/* Headings */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 1em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    padding: 0 0 20px 0;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 700;
+    padding: 0 0 20px 0;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 900;
+    padding: 0 0 20px 0;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+}
+
+h5 {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 0 0 20px 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    font-weight: inherit;
+}
+
+a:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+
+a.disabled, a.disabled:hover {
+    background-color: transparent;
+    color: grey;
+}
+
+img, a img {
+    border:none;
+}
+
+/* Page Breadcrumbs */
+.Nav {
+    font-size: 0.9em;
+    padding-bottom: 4px;
+    clear:both;
+    padding-top:15px;
+    text-align: center;
+}
+
+.ImageCount {
+    color:gray;
+    font-size:12px;
+    text-align: center;
+}
+
+.ProductTinyImageList ul li {
+    width: auto !important;
+    height: auto !important;
+    overflow: hidden;
+    float: left;
+    margin: 0 0 20px 0;
+}
+
+.ProductTinyImageList ul li div {
+    text-align: center;
+}
+.ProductTinyImageList ul li div a {display: block; padding: 0 5px;}
+.ProductTinyImageList ul li div a img {max-width: 100%;}
+
+.ProductTinyImageList ul li .TinyOuterDiv {
+    border: 0px solid white;
+    display: block;
+
+}
+
+.ProductTinyImageList a:hover {
+    background: none;
+}
+.ProductImageName {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ProductZoomImageBox {
+    height: auto !important;
+    width: auto !important;
+}
+.ProductZoomImage {margin: 0 auto;}
+
+.ProductZoomImageBox, .ProductZoomImageBox *{
+    margin:auto;
+    vertical-align: middle;
+
+}
+
+.ProductZoomImage {
+    text-align: center;
+    height: 100% !important;
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+
+.ProductTinyImageList ul {
+    margin: 0pt;
+    padding: 0pt;
+    position: relative;
+    list-style-type: none;
+    white-space:nowrap;
+}
+
+#ImageScrollPrev,
+#ImageScrollNext {
+    float: left;
+    background:none;
+    border:none;
+    margin-top:25px !important;
+    cursor:pointer;
+    display: none;
+}
+
+.ProductTinyImageList {
+    margin:10px auto 0 auto;
+    white-space:nowrap;
+    overflow: hidden;
+}

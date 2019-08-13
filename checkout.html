@@ -1,0 +1,98 @@
+%%Panel.HTMLHead%%
+    <body>
+        %%Panel.DrawerMenu%%
+        <section class="page">
+            %%Panel.Header%%
+            <section class="main">
+                <section class="container checkoutpage">
+                    %%Panel.WrapperBanner%%
+                    <h1 class="TitleHeading">%%LNG_SecureCheckout%%</h1>
+                    <div class="Content Widest" id="LayoutColumn1">
+                        <div class="Block Moveable Panel">
+                            <div class="BlockContent ExpressCheckoutContent">
+                                <div class="CreateAccount">
+                                    <form action="checkout.php?action=choose_billing_address" method="post">
+                                        <div id="CheckoutGuestForm" style="%%GLOBAL_HideCheckoutGuest%%">
+                                            <h3>%%LNG_NotAnExistingCustomer%%</h3>
+                                            <div class="mtop">
+                                                <p>%%LNG_CheckoutGuestIntro%%</p>
+                                                <div class="form" style="line-height: 2;">
+                                                    <ul>
+                                                        <li><label><input name="checkout_type" id="checkout_type_guest" value="guest" type="radio" /> %%LNG_CheckoutAsAGuest%%</label></li>
+                                                        <li><label><input name="checkout_type" id="checkout_type_register" value="register" checked="checked" type="radio" /> %%LNG_RegisterAnAccount%%</label></li>
+                                                        <li><input type="submit" value="%%LNG_Continue%%" class="btn" /></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="%%GLOBAL_HideCheckoutRegistrationRequired%%">
+                                            <h3>%%LNG_NotAnExistingCustomer%%</h3>
+                                            <div class="mtop">
+                                                <p>%%LNG_CreateAccountIntroTitle%%</p>
+                                                <div class="PL40">
+                                                    <ul style="margin-left: 0; line-height: 1.4;">
+                                                        <li>%%LNG_CreateAccountIntro1%%</li>
+                                                        <li>%%LNG_CreateAccountIntro2%%</li>
+                                                        <li>%%LNG_CreateAccountIntro3%%</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="Submit" style="">
+                                                <input type="submit" value="%%LNG_Continue%%" class="btn" />
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="AccountLogin">
+                                    <h3>%%LNG_AlreadyHaveAnAccount%%</h3>
+                                    <form action="checkout.php?action=choose_billing_address" id="LoginForm" class="mtop" method="post">
+                                        <p>%%LNG_AlreadyHaveAnAccountIntro%%</p>
+                                        <div class="FormContainer HorizontalFormContainer">
+                                            <p style="display: %%GLOBAL_HideLoginMessage%%" class="%%GLOBAL_MessageClass%%">
+                                                %%GLOBAL_LoginMessage%%
+                                            </p>
+                                            <dl>
+                                                <dt>%%LNG_EmailAddress%%:</dt>
+                                                <dd><input type="text" class="Textbox Field200 InitialFocus" name="login_email" id="login_email" /></dd>
+
+                                                <dt>%%LNG_Password%%:</dt>
+                                                <dd><input type="password" autocomplete="off" class="Textbox Field200" name="login_pass" id="login_pass" /></dd>
+
+                                                <dt>&nbsp;</dt>
+                                                <dd><a href="%%GLOBAL_ShopPath%%/login.php?action=reset_password">%%LNG_ForgotYourPassword%%</a></dd>
+                                            </dl>
+                                            <p class="Submit">
+                                                <input id="LoginButton" type="submit" value="%%LNG_Continue%%" class="btn" />
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </section>
+            </section>
+            %%Panel.Footer%%
+        </section>
+    
+ <!-- Snap Pixel Code -->
+<script type='text/javascript'>
+if (window.location.href.includes("order-confirmation")) {
+(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+r.src=n;var u=t.getElementsByTagName(s)[0];
+u.parentNode.insertBefore(r,u);})(window,document,
+'https://sc-static.net/scevent.min.js');
+
+snaptr('init', '58e72927-fee3-46b6-a315-baa74a329026', {'user_email': %%GLOBAL_BillingEmail%%});
+
+snaptr('track', 'PURCHASE', {'price': %%ORDER_AMOUNT%%, 'currency': 'USD', 'transaction_id': %%ORDER_ID%%});
+}
+</script>
+<!-- End Snap Pixel Code -->
+
+</body>
+</html>
