@@ -1,6 +1,6 @@
 %%Panel.DOCTYPE%%
 
-<html>
+<html lang="en-US">
 
 <head>
     <!-- Google Tag Manager -->
@@ -59,7 +59,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     %%GLOBAL_HeaderImageStyle%%
 
-    <link rel="stylesheet" href="%%ASSET_Styles/store.css%%">
+<!--    <link rel="stylesheet" href="%%ASSET_Styles/store.css%%">-->
     <link rel="stylesheet" href="%%ASSET_Styles/owl.carousel.css%%">
     <link rel="alternate" hreflang="en-ie, en-ca, en-us" href="alternateURL">
     
@@ -108,7 +108,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!--[if lt IE 9]>
     <script src="%%ASSET_js/html5shiv.js%%"></script>
     <![endif]-->
-    <script src="https://yopify.com/api/yo/js/yo/a83130a4af376561409ea31738f9989f/bootstrap.js"></script>
-   
-    
+
+    <!-- Overwrite default ActiveKB min-height and width styles -->
+    <style>
+        .TitleHeading { padding-left:-25px; }
+        .Content img { padding-right:10px; }
+        #LayoutColumn2 #livesearch { display:none; }
+        #LayoutColumn2 #question_crumbs, #LayoutColumn2 .Box { border:none; background-color:#FFF; }
+        #LayoutColumn2 #question_crumbs { margin-left:0px; }
+    </style>
+    <!-- End styles -->
+
 </head>
